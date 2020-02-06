@@ -1,0 +1,7 @@
+node_modules
+sessions
+*.db
+migrations
+generated
+.next
+__generated__

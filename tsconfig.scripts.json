@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["dom", "es2017"],
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "strict": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "module": "commonjs",
+    "outDir": "dist",
+    "target": "es2017",
+    "isolatedModules": false,
+    "noEmit": false
+  },
+  "exclude": [],
+  "include": ["scripts/**/*.ts"]
+}
