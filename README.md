@@ -1,3 +1,15 @@
+The purpose of this starter kit is to let you quickly develop your ideas with as little effort as possible.
+
+## Features
+1. NextJS api routes
+2. GraphQL api with prisma2 CRUD operations support
+3. Higher order components for Authentications, WindowSize etc.
+4. Material UI as style library
+5. Express for setting up custom middlewares
+6. Puppeteer for PDF support
+7. Passport based session authentication
+8. Nodemailer setup for sending emails
+
 ## Setting up project
 
 ```
