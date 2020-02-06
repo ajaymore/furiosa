@@ -13,7 +13,7 @@ The purpose of this starter kit is to let you quickly develop your ideas with as
 ## Setting up project
 
 ```
-git clone
+git clone https://github.com/ajaymore/furiosa.git
 cd furiosa
 npm install
 npx prisma2 migrate save --experimental
