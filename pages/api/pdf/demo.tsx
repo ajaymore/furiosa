@@ -85,6 +85,7 @@ const handler = async (req, res) => {
     res.setHeader('Content-Type', 'application/pdf');
     res.end(pdf);
   } catch (err) {
+    console.log(err);
     res.status(400).end();
   }
 };

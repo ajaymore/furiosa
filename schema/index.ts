@@ -10,27 +10,25 @@ const User = objectType({
     t.model.name();
     t.model.email();
     t.model.password();
-    t.model.posts();
+    t.model.createdAt();
+    t.model.updatedAt();
   }
 });
 
-const Post = objectType({
-  name: 'Post',
+const Group = objectType({
+  name: 'Group',
   definition(t) {
     t.model.id();
-    t.model.title();
-    t.model.content();
-    t.model.published();
-    t.model.author();
-    t.model.type();
+    t.model.name();
+    t.model.users();
+    t.model.createdAt();
+    t.model.updatedAt();
   }
 });
 
 const Query = objectType({
   name: 'Query',
   definition(t) {
-    t.crud.post();
-    t.crud.posts({ ordering: true, pagination: true, filtering: true });
     t.crud.users({ ordering: true, pagination: true, filtering: true });
     t.crud.user();
     t.field('me', {
@@ -48,9 +46,6 @@ const Query = objectType({
 const Mutation = objectType({
   name: 'Mutation',
   definition(t) {
-    t.crud.createOnePost();
-    t.crud.updateOnePost();
-    t.crud.deleteOnePost();
     t.crud.createOneUser();
     t.field('createOneUser', {
       type: 'User',
@@ -93,7 +88,7 @@ const getPath = (fileName: string) =>
   path.join(process.cwd(), 'generated', fileName);
 
 export const schema = makeSchema({
-  types: [Post, User, Query, Mutation],
+  types: [User, Group, Query, Mutation],
   plugins: [nexusPrismaPlugin()],
   outputs: {
     schema: getPath('schema.graphql'),

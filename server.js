@@ -5,7 +5,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
 const { Strategy } = require('passport-local');
-// const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer');
 const compression = require('compression');
 const nodemailer = require('nodemailer');
 const morgan = require('morgan');
@@ -93,7 +93,7 @@ server.use(
 server.use(passport.initialize());
 server.use(passport.session());
 server.use(async (req, res, nextMiddleware) => {
-  // req.puppeteer = puppeteer;
+  req.puppeteer = puppeteer;
   req.prisma = prisma;
   nextMiddleware();
 });
