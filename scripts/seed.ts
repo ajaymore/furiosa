@@ -1,6 +1,7 @@
-require('dotenv').config();
+// require('dotenv').config();
 import { PrismaClient } from '@prisma/client';
 import { hash } from 'bcryptjs';
+import faker from 'faker';
 
 const prisma = new PrismaClient();
 
@@ -20,6 +21,24 @@ const prisma = new PrismaClient();
       }
     }
   });
+  await Promise.all(
+    Array.from(Array(10).keys()).map(async () => {
+      return prisma.group.create({
+        data: {
+          name: faker.random.word(),
+          users: {
+            create: Array.from(Array(20).keys()).map(() => {
+              return {
+                name: faker.name.firstName(),
+                email: faker.internet.email(),
+                password
+              };
+            })
+          }
+        }
+      });
+    })
+  );
 })().then(() => {
   console.log('Seeding complete...');
   process.exit(0);

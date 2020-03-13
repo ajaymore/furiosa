@@ -1,6 +1,7 @@
 The purpose of this starter kit is to let you quickly develop your ideas with as little effort as possible.
 
 ## Features
+
 1. NextJS api routes
 2. GraphQL api with prisma2 CRUD operations support
 3. Higher order components for Authentications, WindowSize etc.
@@ -9,6 +10,15 @@ The purpose of this starter kit is to let you quickly develop your ideas with as
 6. Puppeteer for PDF support
 7. Passport based session authentication
 8. Nodemailer setup for sending emails
+
+## Prerequisites MySQL DB Connection
+
+## OR you can install via docker
+
+```
+docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=my-secret-pw -p 3306:3306 --restart always -d mysql:latest
+docker run --name phpmyadmin -d --link mysql-db:db -p 4444:80 phpmyadmin/phpmyadmin
+```
 
 ## Setting up project
 

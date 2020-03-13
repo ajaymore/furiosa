@@ -9,30 +9,6 @@ import { Me } from '../__generated__/Me';
 import { Typography, Button } from '@material-ui/core';
 import { logout } from '../lib/utils';
 
-const CREATE_POST = gql`
-  mutation CreateOnePost(
-    $title: String!
-    $content: String!
-    $id: Int!
-    $type: PostType!
-  ) {
-    createOnePost(
-      data: {
-        title: $title
-        content: $content
-        published: false
-        author: { connect: { id: $id } }
-        type: $type
-      }
-    ) {
-      id
-      title
-      content
-      published
-    }
-  }
-`;
-
 const USER_FRAGMENT = gql`
   fragment UserInfo on User {
     id

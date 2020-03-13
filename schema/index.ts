@@ -12,6 +12,7 @@ const User = objectType({
     t.model.password();
     t.model.createdAt();
     t.model.updatedAt();
+    t.model.groups();
   }
 });
 
@@ -20,9 +21,8 @@ const Group = objectType({
   definition(t) {
     t.model.id();
     t.model.name();
-    t.model.users();
     t.model.createdAt();
-    t.model.updatedAt();
+    t.model.users();
   }
 });
 
@@ -31,6 +31,12 @@ const Query = objectType({
   definition(t) {
     t.crud.users({ ordering: true, pagination: true, filtering: true });
     t.crud.user();
+    t.int('usersCount', {
+      resolve(_, _args, ctx) {
+        return ctx.prisma.user.count();
+      }
+    });
+    t.crud.groups();
     t.field('me', {
       type: 'User',
       resolve(_, _args, ctx) {
@@ -81,6 +87,9 @@ const Mutation = objectType({
       }
     });
     t.crud.deleteOneUser();
+    t.crud.createOneGroup();
+    t.crud.deleteOneGroup();
+    t.crud.updateOneGroup();
   }
 });
 

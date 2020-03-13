@@ -28,7 +28,7 @@
     "@material-ui/core": "^4.9.1",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.8",
-    "@prisma/client": "^2.0.0-preview022",
+    "@prisma/client": "^2.0.0-preview024",
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
     "apollo-link-context": "^1.0.19",
@@ -51,7 +51,7 @@
     "next": "^9.2.2",
     "next-cookies": "^2.0.3",
     "nexus": "^0.12.0-rc.13",
-    "nexus-prisma": "^0.10.0",
+    "nexus-prisma": "^0.11.1",
     "nodemailer": "^6.4.2",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
@@ -65,12 +65,14 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/faker": "^4.1.10",
     "@types/node": "^13.1.0",
     "@types/nodemailer": "^6.4.0",
     "@types/react": "^16.9.17",
     "@types/ws": "^6.0.4",
     "@types/yup": "^0.26.27",
-    "prisma2": "^2.0.0-preview022",
+    "faker": "^4.1.0",
+    "prisma2": "^2.0.0-preview024",
     "ts-node": "^8.5.4",
     "typescript": "3.7.4"
   }
