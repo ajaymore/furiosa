@@ -33,7 +33,7 @@
     "apollo-client": "^2.6.8",
     "apollo-link-context": "^1.0.19",
     "apollo-link-http": "^1.5.16",
-    "apollo-server-micro": "^2.9.14",
+    "apollo-server-micro": "^2.14.2",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
